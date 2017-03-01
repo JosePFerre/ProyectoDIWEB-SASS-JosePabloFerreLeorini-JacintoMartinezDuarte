@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Superhero Dash. Colección de comics</title>
+  
+    <script src="js/scripts.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 	
+  	<link rel="stylesheet" href="css/estilosConvertidos.css">
+</head>
+
+<body>
+	<div class='seccion'>
+		<div class=row id='cabecera'>
+			<div class='col-xs-12'>
+				<img src="img/logo.png" alt="" class='logo'>
+			</div>
+		</div>
+		<div class=row id='fraseCabecera'>
+			<div class='col-xs-1'></div>
+			<div class='col-xs-10'>
+					<h2>¡La colección de los mejores comics más completa y divertida!</h2>
+			</div>
+		</div>
+		<div class=row id='imagenCabecera'>
+			<div class='col-xs-12'>
+				<section class="parallax" id="parallax1">
+				
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class='seccion'>
+		<div class='row' id='filaCaracteristicas'>
+			<div class='col-xs-1 col-md-1'></div>
+			<div class='col-xs-10 col-md-5'>
+				<ul id='listaCaracteristicas'>
+					<li>Edicion limitada de coleccionista</li>
+					<li>Tamaño de 17 x 25.7 cm</li>
+					<li>Tapa dura</li>
+					<li>Colección completa de 30 comics</li>
+					<li>Incluye la edición inédita de Batman "75 años de Batman y Batman en Barcelona"</li>
+					<li>Incluye comentarios originales de los autores</li>
+				</ul>
+			</div>
+            <div class='col-xs-1 col-md-0'></div>
+		<div class=row id='imagenCaracteristicas'>
+			<div class='col-xs-3 col-md-0'></div>
+			<div class='col-xs-9 col-md-5' id='imagenPersonaje'>
+				<img src="img/personajes1.png" alt="" class='img-responsive'>
+			</div>
+		</div>
+		</div>
+	</div>
+    <div class=row id='imagenCabecera'>
+			<div class='col-xs-12'>
+				<section class="parallax" id="parallax2">
+				
+				</section>
+			</div>
+		</div>
+	<div class='seccion'>
+		<div class="row" id='filaContenido'>
+			<div class='col-xs-1 col-md-1'></div>
+			<div class='col-xs-10 col-md-5'>
+				<ul id='listaContenido'>
+					<li>Superman: El hombre de acero</li>
+					<li>Batman: 75 años de Batman y Batman en Barcelona</li>
+					<li>El increible Spiderman</li>
+					<li>Flash: Renacimiento</li>
+					<li>Superman: El ultimo hijo</li>
+					<li>Green arrow: El arco del cazador</li>
+					<li>Batman: La saga de Ra's Al Ghul</li>
+					<li>Batman/Superman: Encrucijada de mundos</li>
+				</ul>
+			</div>
+		
+		<div class="row" id='filaFormulario'>
+			<div class='col-xs-12 col-md-5'>
+				<form>
+			  	<div class='row'>
+                    <span class='col-xs-1'></span>
+				  <div class="form-group col-xs-5">
+					<label for="nombre">Nombre</label>
+					<input type="text" class="form-control" id="nombre">
+				  </div>
+				  <div class="form-group col-xs-5">
+					<label for="apellidos">Apellidos</label>
+					<input type="text" class="form-control" id="apellidos">
+				  </div>
+                    <span class='col-xs-1'></span>
+			  	</div>
+                    
+                    <div class="row">
+                        <span class='col-xs-1'></span>
+				        <div class="col-xs-10 form-group">
+					       <label for="email">Correo Electrónico</label>
+					       <input type="text" class="form-control" id="email">
+				        </div>
+                    <span class='col-xs-1'></span>
+                    </div>
+                    <div class="row">
+                    <span class='col-xs-1'></span>
+				  <div class="col-xs-10 form-group">
+					<label for="direccion">Dirección</label>
+					<input type="text" class="form-control" id="direccion">
+				  </div>
+                    <span class='col-xs-1'></span>
+                    </div>
+				  <div class='row'>
+                    <span class='col-xs-1'></span>
+				  <div class="form-group col-xs-5">
+					<label for="tlf">Teléfono</label>
+					<input type="text" class="form-control" id="tlf">
+				  </div>
+				  <div class="form-group col-xs-5" id='contenedorComprar'>
+				  	<button id="botonComprar" type="button" class="col-xs-5 btn btn-mdb" data-toggle="modal" data-target="#compraMensaje">Comprar</button>
+				</div>
+                    <span class='col-xs-1'></span>
+				</div>
+				</form>
+			
+            </div>
+            <div id="compraMensaje" class="modal fade" role="dialog">
+                <div class="modal-dialog">       
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Compra confirmada.</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Gracias querido lector, su suscipción a esta maravillosa cosa que vendemos ha sido realizada correctamente. Se enviará un correo electrónico con los datos de la compra.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>      
+                </div>
+            </div>  
+		</div>
+            </div>
+	</div>
+    <footer>
+        <p>Proyecto de sass, Jacinto Martínez Duarte y Jose Pablo Ferre Leorini</p>
+    </footer>
+</body>
+</html>

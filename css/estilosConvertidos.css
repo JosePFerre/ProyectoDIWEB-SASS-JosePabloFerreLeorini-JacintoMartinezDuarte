@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*
+Trabajo de SASS.
+
+Jose Pablo Ferre Leorini, Jacinto Martinez Duarte
+
+2┬║DAW Dise├▒o de Interfaces de Usuario
+
+*/
+@font-face {
+  font-family: 'fuenteTitulos';
+  src: url("../fonts/fuenteNegra.otf") format("opentype"); }
+@font-face {
+  font-family: 'fuenteAlt';
+  src: url("../fonts/fuenteBlanca.otf") format("opentype"); }
+@font-face {
+  font-family: 'fuenteTexto';
+  src: url("../fonts/fuenteTexto.ttf") format("truetype"); }
+html, body {
+  height: 100%;
+  background-image: url("../img/fondoClaro.jpg");
+  overflow-x: hidden; }
+
+.seccion {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/*-------------------------Secci├│n 1-----------------------------*/
+#cabecera {
+  height: 50%; }
+  #cabecera > div {
+    height: 100%; }
+
+#fraseCabecera {
+  height: 25%;
+  font-family: "fuenteTitulos";
+  text-align: center; }
+
+#imagenCabecera {
+  height: 25%; }
+  #imagenCabecera > div {
+    height: 100%; }
+
+section {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#parallax1 {
+  width: 100%;
+  background-image: url(../img/parallax1.jpg); }
+
+.logo {
+  width: 100%;
+  max-width: 493px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15%; }
+
+/*-------------------------Secci├│n 2-----------------------------*/
+#filaCaracteristicas {
+  height: 50%; }
+
+#listaCaracteristicas {
+  border: 40px solid transparent;
+  padding-left: 10px;
+  border-image: url(/img/bocata22.png) 45% round;
+  margin-top: 5%;
+  font-family: "fuenteTitulos";
+  font-size: 120%;
+  border-radius: 55px;
+  list-style-type: square; }
+
+#imagenCaracteristicas {
+  height: 50%; }
+
+#imagenPersonaje {
+  margin-top: 5%;
+  height: 140%; }
+  #imagenPersonaje > .img-responsive {
+    height: 100%; }
+
+#parallax2 {
+  width: 100%;
+  background-image: url(../img/parallax2.jpg); }
+
+@media all and (min-width: 992px) {
+  #imagenPersonaje {
+    margin-top: 0%;
+    float: right;
+    height: 175%; }
+
+  #listaCaracteristicas {
+    height: 100%;
+    font-size: 175%;
+    padding-left: 10%; }
+    #listaCaracteristicas li {
+      margin-top: 5%;
+      transition: color 0.3s; }
+      #listaCaracteristicas li:hover {
+        color: red;
+        cursor: default; }
+
+  #filaCaracteristicas {
+    height: 100%;
+    margin-top: 5%; } }
+/*-------------------------Secci├│n 3-----------------------------*/
+#filaContenido {
+  height: 40%; }
+
+#listaContenido {
+  border: 40px solid transparent;
+  padding-left: 20px;
+  border-image: url(/img/bocata4.png) 45% round;
+  margin-top: 5%;
+  font-family: "fuenteTitulos";
+  background-color: white;
+  border-radius: 55px;
+  list-style-type: upper-roman; }
+
+#filaFormulario {
+  height: 60%; }
+
+#filaBoton, #contenedorComprar {
+  height: 100%; }
+
+#botonComprar {
+  height: 50px;
+  width: 100%;
+  background-color: greenyellow;
+  border: 2px solid rgba(84, 255, 89, 0.5);
+  font-family: fuenteTitulos;
+  font-size: 150%; }
+
+footer {
+  padding-top: 1%;
+  height: 10%;
+  background: black;
+  font-family: 'fuenteTexto';
+  font-size: 140%;
+  color: white;
+  text-align: center; }
+
+.modal-footer > button {
+  background: green;
+  color: white; }
+
+.modal-content {
+  border: solid green;
+  margin-top: 40%;
+  background-color: palegreen; }
+  .modal-content label {
+    font-size: 100%; }
+
+.modal-header {
+  border-bottom: solid 1px grey; }
+
+.modal-footer {
+  border-top: solid 1px grey; }
+
+@media all and (min-width: 992px) {
+  #listaContenido {
+    font-size: 175%;
+    padding-left: 10%; }
+
+  .logo {
+    margin-top: 5%;
+    margin-bottom: 2.5%; }
+
+  #listaContenido > li {
+    margin-top: 5%;
+    transition: color 0.3s; }
+    #listaContenido > li:hover {
+      color: #379617;
+      cursor: default; }
+
+  #filaFormulario {
+    margin-top: 10%; }
+
+  .form-group > label {
+    font-family: fuenteTitulos;
+    font-size: 150%; }
+
+  #botonComprar {
+    height: 75px;
+    padding-top: 5%; } }
+
+/*# sourceMappingURL=estilosConvertidos.css.map */
