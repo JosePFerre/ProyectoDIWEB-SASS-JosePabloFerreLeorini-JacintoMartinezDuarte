@@ -7,34 +7,47 @@ Jose Pablo Ferre Leorini, Jacinto Martinez Duarte
 
 */
 
-@font-face {
-  font-family: 'fuenteTitulos';
-  src: url('../fonts/fuenteNegra.otf') format("opentype");
+/*VARIABLES*/
+
+$todo: 100%;
+$bordeModal: solid 1px grey;
+
+/*PARTIALS*/
+
+@import 'estiloParallax';
+
+
+/*MIXINS*/
+
+@mixin fuente($nombre, $url, $formato) {
+    @font-face {
+  font-family: $nombre;
+  src: url($url) format($formato);
+    }}
+
+
+/*FUNCIONES*/
+
+@each $nombreFuente, $ruta, $formato in ('fuenteTitulos',		 '../fonts/fuenteTitulo.otf', 'opentype'),
+                                  ('fuenteAlt', '../fonts/fuenteAlt.otf', 'opentype'),
+                                  ('fuenteTexto', '../fonts/fuenteTexto.otf', 'truetype') {
+
+	@include fuente($nombreFuente, $ruta, $formato);
+									  
 }
 
-
-@font-face {
-  font-family: 'fuenteAlt';
-  src: url('../fonts/fuenteBlanca.otf') format("opentype");
-}
-
-
-@font-face {
-  font-family: 'fuenteTexto';
-  src: url('../fonts/fuenteTexto.ttf') format("truetype");
-}
-
+//---------------------------------------------------------------//
 
 html, body {
-  height: 100%;
+  height: $todo;
   background-image: url("../img/fondoClaro.jpg");
   overflow-x: hidden;
 }
 
 .seccion {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: $todo;
+  height: $todo;
 }
 
 /*-------------------------Sección 1-----------------------------*/
@@ -42,7 +55,7 @@ html, body {
 #cabecera {
   height: 50%;
   > div {
-    height: 100%;
+    height: $todo;
   }
 }
 
@@ -55,31 +68,26 @@ html, body {
 #imagenCabecera {
   height: 25%;
   > div {
-    height: 100%;
+    height: $todo;
   }
 }
 
-section {
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#parallax1 {
-  width: 100%;
-  background-image: url(../img/parallax1.jpg);
-}
-
 .logo {
-  width: 100%;
+  width: $todo;
   max-width: 493px;
   display: block;
   margin: 0 auto;
   margin-top: 15%;
 }
 
+@media all and (min-width: 992px) {
+
+  .logo {
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+  }
+	
+}
 /*-------------------------Sección 2-----------------------------*/
 
 #filaCaracteristicas {
@@ -105,14 +113,10 @@ section {
   margin-top: 5%;
   height: 140%;
   > .img-responsive {
-    height: 100%;
+    height: $todo;
   }
 }
 
-#parallax2 {
-  width: 100%;
-  background-image: url(../img/parallax2.jpg);
-}
 
 @media all and (min-width: 992px) {
   #imagenPersonaje {
@@ -121,7 +125,7 @@ section {
     height: 175%;
   }
   #listaCaracteristicas {
-    height: 100%;
+    height: $todo;
     font-size: 175%;
     padding-left: 10%;
     li {
@@ -134,7 +138,7 @@ section {
     }
   }
   #filaCaracteristicas {
-    height: 100%;
+    height: $todo;
     margin-top: 5%;
   }
 }
@@ -161,12 +165,12 @@ section {
 }
 
 #filaBoton, #contenedorComprar {
-  height: 100%;
+  height: $todo;
 }
 
 #botonComprar {
   height: 50px;
-  width: 100%;
+  width: $todo;
   background-color: greenyellow;
   border: 2px solid rgba(84, 255, 89, 0.5);
   font-family: fuenteTitulos;
@@ -193,16 +197,16 @@ footer {
   margin-top: 40%;
   background-color: palegreen;
   label {
-    font-size: 100%;
+    font-size: $todo;
   }
 }
 
 .modal-header {
-  border-bottom: solid 1px grey;
+  border-bottom: $bordeModal;
 }
 
 .modal-footer {
-  border-top: solid 1px grey;
+  border-top: $bordeModal;
 }
 
 @media all and (min-width: 992px) {
@@ -210,10 +214,7 @@ footer {
     font-size: 175%;
     padding-left: 10%;
   }
-  .logo {
-    margin-top: 5%;
-    margin-bottom: 2.5%;
-  }
+
   #listaContenido > li {
     margin-top: 5%;
     transition: color 0.3s;

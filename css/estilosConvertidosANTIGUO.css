@@ -7,34 +7,15 @@ Jose Pablo Ferre Leorini, Jacinto Martinez Duarte
 2┬║DAW Dise├▒o de Interfaces de Usuario
 
 */
-/*VARIABLES*/
-/*PARTIALS*/
-section {
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-#parallax1 {
-  width: 100%;
-  background-image: url(../img/parallax1.jpg); }
-
-#parallax2 {
-  width: 100%;
-  background-image: url(../img/parallax2.jpg); }
-
-/*MIXINS*/
-/*FUNCIONES*/
 @font-face {
-  font-family: "fuenteTitulos";
-  src: url("../fonts/fuenteTitulo.otf") format("opentype"); }
+  font-family: 'fuenteTitulos';
+  src: url("../fonts/fuenteNegra.otf"); }
 @font-face {
-  font-family: "fuenteAlt";
-  src: url("../fonts/fuenteAlt.otf") format("opentype"); }
+  font-family: 'fuenteAlt';
+  src: url("../fonts/fuenteBlanca.otf"); }
 @font-face {
-  font-family: "fuenteTexto";
-  src: url("../fonts/fuenteTexto.otf") format("truetype"); }
+  font-family: 'fuenteTexto';
+  src: url("../fonts/fuenteTexto.ttf"); }
 html, body {
   height: 100%;
   background-image: url("../img/fondoClaro.jpg");
@@ -61,6 +42,17 @@ html, body {
   #imagenCabecera > div {
     height: 100%; }
 
+section {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#parallax1 {
+  width: 100%;
+  background-image: url(../img/parallax1.jpg); }
+
 .logo {
   width: 100%;
   max-width: 493px;
@@ -68,10 +60,6 @@ html, body {
   margin: 0 auto;
   margin-top: 15%; }
 
-@media all and (min-width: 992px) {
-  .logo {
-    margin-top: 5%;
-    margin-bottom: 2.5%; } }
 /*-------------------------Secci├│n 2-----------------------------*/
 #filaCaracteristicas {
   height: 50%; }
@@ -94,6 +82,10 @@ html, body {
   height: 140%; }
   #imagenPersonaje > .img-responsive {
     height: 100%; }
+
+#parallax2 {
+  width: 100%;
+  background-image: url(../img/parallax2.jpg); }
 
 @media all and (min-width: 992px) {
   #imagenPersonaje {
@@ -173,6 +165,10 @@ footer {
   #listaContenido {
     font-size: 175%;
     padding-left: 10%; }
+
+  .logo {
+    margin-top: 5%;
+    margin-bottom: 2.5%; }
 
   #listaContenido > li {
     margin-top: 5%;
